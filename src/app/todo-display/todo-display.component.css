@@ -1,0 +1,213 @@
+.container {
+    display: flex;
+}
+
+.container .container-small {
+    width: 60%;
+    margin: auto;
+}
+
+.container-small h2 {
+    color: #123456;
+}
+
+#dialogBox {
+    /* display: blo; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#dialogContent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    border-radius: 1rem;
+}
+
+#dialogContent h2 {
+    text-align: center;
+    margin: .5rem;
+}
+
+.diaBtn {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+}
+
+.diaBtn .confirm {
+    background-color: red;
+    color: white;
+    padding: .4rem;
+    border-radius: .3rem;
+}
+
+.diaBtn .cancel {
+    background-color: gray;
+    color: white;
+    padding: .4rem;
+    border-radius: .3rem;
+}
+
+.card {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    width: 31%;
+    border: 1px solid #123456;
+    margin: .4rem 1rem;
+    margin-right: 0;
+    height: 12rem;
+    border-radius: 1rem;
+}
+
+.card form .title {
+    display: flex;
+    padding: .4rem;
+    height: 2.2rem;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #123456;
+    color: white;
+}
+
+.card form .desc {
+    color: #789012;
+    padding: .4rem;
+    height: 6.5rem;
+}
+
+.card form .title .tite {
+    width: 100%;
+}
+
+.card form .title .tite h3 {
+    width: 100%;
+}
+
+.title .edit {
+    border-left: 3px solid lightgreen;
+    padding-left: 2px;
+    cursor: pointer;
+}
+
+.title .del {
+    border-left: 3px solid red;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.title .del:hover {
+    opacity: .8;
+}
+
+.title .edit p:hover {
+    opacity: .8;
+}
+
+
+.title input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #123456;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    padding: .1px;
+}
+.desc textarea {
+    font-family: sans-serif;
+    height: 113.5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: #789012;
+    font-size: medium;
+    padding: .1px;
+    resize: none;
+        
+}
+
+.card form button {
+    position: obsolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0 0 1rem 1rem;
+    padding: 3px;
+    font-size: large;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background-color: #789012;
+    color: white;
+}
+
+.card form button:hover {
+    opacity: .8;
+}
+
+.card form button:active {
+    opacity: 1;
+}
+
+.card .time {
+    color: white;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title .tite {
+    display: flex;
+
+}
+
+.desc{
+    padding: 4px;
+    overflow-y: auto;
+    text-align: justify;
+}
+
+.desc p{
+    overflow-y: auto;
+}
+
+.desc::-webkit-scrollbar{
+    background-color: #789012;
+    width: 4px;
+    border-radius:5rem;
+}
+
+/* Track */
+.desc::-webkit-scrollbar-track {
+    background: #123456;
+    border-radius:1rem;
+    border-radius: 5rem;
+}
+
+/* Handle */
+.desc::-webkit-scrollbar-thumb {
+    background: #789012;
+    border-radius:5rem;    
+}
+
+/* Handle on hover */
+.desc::-webkit-scrollbar-thumb:hover {
+    background: red
+}

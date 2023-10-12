@@ -1,0 +1,11 @@
+<div class="login">
+        <h2>Please Login Here</h2>
+        <p style="color: red; margin: auto;font-size:small;">{{loginError}}</p>
+        <form (ngSubmit)="loginFormData()" [formGroup]="loginForm">
+                <input type="email" name="email" placeholder="Enter Your Email ID" formControlName="email">
+                <p *ngIf="email && email.touched && email.invalid" >Please enter the Valid email(e.g - abcde@xyz.com)</p>
+                <input type="password" name="password" placeholder="Enter Your Password" formControlName="password">
+                <p *ngIf="password && password.touched && password.invalid" >Please enter the Valid Password(8-16 character)</p>
+            <button [disabled]="loginForm.invalid">login</button>
+        </form>
+</div>

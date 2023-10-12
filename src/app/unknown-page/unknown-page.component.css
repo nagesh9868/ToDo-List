@@ -1,0 +1,18 @@
+.unknownPage{
+    display: flex;
+    height: 35rem;
+    width: 99.9%;
+    border: 1px solid rebeccapurple;
+    flex-direction: column;
+}
+
+.unknownPage h2{
+    margin: auto;
+    color: red;
+}
+
+.unknownPage a{
+    color: blue;
+    text-decoration: none;
+    margin: auto;
+}

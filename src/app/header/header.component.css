@@ -1,0 +1,81 @@
+header{
+    display: flex;
+    padding: .6rem;
+    background-color: #123456;
+}
+
+.logo{
+    width: 33.3%;
+    justify-content: left;    
+}
+
+.logo a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.search{
+    display: inline-flex;
+    width: 33.3%;
+    justify-content: center;
+}
+
+.searchTags{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.searchTags input{
+    width: 85%;
+    outline: none;
+    border: none;
+    border-radius: 5rem 0 0 5rem;
+    padding-left: 1rem;
+    color: black;
+    font-size: medium;
+}
+
+.searchTags button{
+    background-color: #789012;
+    width: 15%;
+    outline: none;
+    border-radius: 0 5rem 5rem 0;
+    border: none;
+}
+
+.searchTags button:hover{
+    opacity: .8;
+}
+
+.search .searchTags button:active{
+    opacity: 1;
+}
+
+.menu{
+    display: flex;
+    width: 33.3%;
+    justify-content: right;
+    color: whitesmoke;
+    margin: auto; 
+}
+
+.menu ul{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.menu ul li{
+    margin-left: 1rem;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: large;  
+    padding-left: .2rem;
+    color: whitesmoke;
+    border-left: 4px solid #789012;
+}
+

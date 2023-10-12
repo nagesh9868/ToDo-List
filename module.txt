@@ -1,0 +1,7 @@
+add details 
+loader 
+one field also require as registration no
+
+if already a RC there in DB then show a pop up error thru Mat Dialog
+
+for imageupload we need to append the file 

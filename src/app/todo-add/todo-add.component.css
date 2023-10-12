@@ -1,0 +1,103 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    justify-content: left;
+}
+
+.container form{
+    width: 60%;
+    margin: auto;
+}
+
+.title{
+    margin-bottom: 1rem;
+}
+
+.title .lable{
+    color: #123456;
+    width: 100%;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.title input{
+    font-family: sans-serif;
+    width: 95%;
+    margin: .4rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5rem;
+    font-size: medium;
+    background-color: #789012;
+    opacity: .6;
+    padding: .7rem;
+    color: white;
+}
+
+
+.title input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.desc .lable{
+    width: 100%;
+    color: #123456;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.desc textarea{
+    font-family: sans-serif;
+    width: 95%;
+    margin: .4rem 1rem;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-size: medium;
+    background-color: #789012;
+    padding: .6rem;
+    color: white;
+    opacity: .6;
+    resize: none;
+}
+
+.desc textarea::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+.todo-btn{
+    background-color: #789012;
+    outline: none;
+    margin: 0 1rem;
+    border-radius: 5rem;
+    border: none;
+    padding: .4rem 3rem;
+    color: white;
+    font-weight: bolder;
+    border: 1px solid gray;
+    font-size: large;
+}
+
+.todo-btn:hover{
+    opacity: .8;
+}
+
+.todo-btn:active{
+    opacity: 1;
+}
+
+.todo-btn:disabled{
+    opacity: .5;
+    border: 2px solid #789012;
+    background-color: gray;
+}
+
+p{
+    color: red;
+    font-size: small;
+    text-align: center;
+}
+

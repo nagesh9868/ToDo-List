@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="container-small">
+        <h2>Find your ToDo's Below</h2>
+        <div id="dialogBox" *ngIf="popupVisible">
+            <div id="dialogContent">
+                <h3>Do you really want to Delete the below ToDo</h3>
+                <h2>{{popupTodotitle}}</h2>
+                <div class="diaBtn">
+                    <input type="submit" value="Confirm" class="confirm" (click)="deleteToDo(popupTodoId)">
+                    <input type="submit" value="Cancel" class="cancel" (click)="cancelDelete()">
+                </div>
+            </div>
+        </div>
+        <!-- Table -->
+        <div class="card" *ngFor="let todo of listData">
+            <form #updateForm="ngForm" (ngSubmit)="updateToDo(updateForm.value, todo.id)">
+                <div class="title">
+                    <div class="tite">
+                        <h3 *ngIf="todo.id!==todoid">{{todo.title}}</h3>
+                        <input name="title" [ngModel]="todo.title" *ngIf="titleEdit === todo.id" type="text">
+                        <div class="edit">
+                            <p (click)="editToDo(todo.id)">🖋</p>
+                        </div>
+                        <div class="del">
+                            <p (click)="showPopup(todo.id, todo.title)">❌</p>
+                        </div>
+                    </div>
+                    <div class="time" *ngIf="titleEdit !== todo.id" >{{todo.dateTime}}</div>   
+                </div>
+                <div class="desc">
+                    <p *ngIf="todo.id!==todoid">{{todo.desc}}</p>
+                    <textarea name="desc" [ngModel]="todo.desc" type="text" *ngIf="titleEdit === todo.id"></textarea>
+                </div>
+                <button *ngIf="todo.id === todoid">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

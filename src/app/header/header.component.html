@@ -1,0 +1,34 @@
+<header>
+    <div class="logo">
+        <a>
+            <h1 (click)="logo()">TO-DO List</h1>
+        </a>
+    </div>
+    <div class="search">
+        <div class="searchTags" *ngIf="searchVisible">
+            <input (keyup)="searchToDo(search.value)" #search type="text" name="search"
+                placeholder="Find your To Do's Here">
+            <button (click)="searchToDo(search.value)">🍳</button>
+        </div>
+    </div>
+    <div class="menu" *ngIf="isLoggedIn">
+        <ul>
+            <li>
+                <a routerLink="register">Register</a>
+            </li>
+            <li>
+                <a routerLink="login">Login</a>
+            </li>
+        </ul>
+    </div>
+    <div class="menu" *ngIf="!isLoggedIn" >
+        <ul>
+            <li>
+                <a>{{loggedName | titlecase}}</a>
+            </li>
+            <li>
+                <a (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+</header>

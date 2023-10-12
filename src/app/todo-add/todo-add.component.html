@@ -1,0 +1,22 @@
+<div class="container">
+    <form #toDoData="ngForm" (ngSubmit)="addToDo(toDoData.value)">
+        <div class="title">
+            <div class="lable">
+                <label for="title">Title</label>
+            </div>
+            <input type="text"  [(ngModel)]="titleText" required minlength="5"  #title="ngModel" name="title" ngModel value= {{title}}>
+            <p *ngIf="title.touched && !title.value">{{errorMessageTitle}}</p>
+            <p *ngIf="title.errors?.['minlength']">Must enter at least 5 character</p>
+        </div>
+        <div class="desc">
+            <div class="lable">
+                <label for="desc">Description</label>
+            </div>
+            <textarea type="text" name="desc" required minlength="10" #desc="ngModel" rows="5" ngModel [(ngModel)]="descText"></textarea>
+            <p *ngIf="!desc.value && desc.touched">{{errorMessageDesc}}</p>
+            <p *ngIf="desc.errors?.['minlength']">Must Enter at least 10 character</p>
+        </div>
+        <button [disabled]="title.invalid || desc.invalid || isLoading" class="todo-btn">{{isLoading?"Loading...":"Add ToDo"}}</button>
+    </form>
+</div>
+<app-todo-display [listData]="listData"></app-todo-display>
